@@ -60,7 +60,7 @@ public class Main {
         for (int i = 0; i < heroesAttack.length; i++) {
             if (bossHealth > 0 && heroesHealth[i] > 0) {
                 heroesHealth[i] = heroesHealth[i] - bossAttack;
-                heroesHealth[3] = heroesHealth[3] - bossAttack;
+
             }
         }
     }
@@ -68,9 +68,8 @@ public class Main {
     public static void medicalTreatment() {
         for (int i = 0; i < heroesHealth.length; i++) {
             if (heroesHealth[0] > 0 && heroesHealth[1] > 0 && heroesHealth[2] > 0 && heroesHealth[3] > 0 || bossHealth > 0) {
-                heroesHealth[0] = heroesHealth[i] + medicalTreatment;
-                heroesHealth[1] = heroesHealth[i] + medicalTreatment;
-                heroesHealth[2] = heroesHealth[i] + medicalTreatment;
+                heroesHealth[i] = heroesHealth[i] + medicalTreatment;
+
             }
         }
     }
